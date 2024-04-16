@@ -20,3 +20,9 @@ a {
 body {
   background-color: #88effd;
 }
+
+.crew-image {
+  height: 18rem;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
