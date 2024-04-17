@@ -21,10 +21,11 @@ export default function Team() {
 
   return (
     <div className="text-center my-4">
+      <h1>Team</h1>
       <Link href="/new" passHref>
         <Button>Add Crew Member</Button>
       </Link>
-      <div className="d-flex flex-wrap">
+      <div className="team-display d-flex flex-wrap">
         {members.map((member) => (
           <MemberCard key={member.firebaseKey} member={member} onUpdate={displayMembers} />
         ))}

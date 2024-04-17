@@ -68,7 +68,6 @@ export default function MemberForm({ member }) {
           name="image"
           value={formInput.image}
           onChange={handleChange}
-          required
         />
       </FloatingLabel>
 

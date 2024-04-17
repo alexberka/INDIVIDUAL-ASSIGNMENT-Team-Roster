@@ -31,6 +31,10 @@ body {
   }
 }
 
+.team-display {
+  justify-content: space-between;
+}
+
 .crew-image {
   height: 18rem;
   object-fit: cover;
