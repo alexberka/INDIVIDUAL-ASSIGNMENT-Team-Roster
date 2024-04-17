@@ -18,7 +18,17 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: #4d8abc;
+}
+
+.welcome {
+  background: rgba(220, 220, 220, 0.642);
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-shadow: 1px 1px 1px white;
+  .copy-btn {
+    margin: 5px;
+  }
 }
 
 .crew-image {
