@@ -7,7 +7,7 @@ function Signin() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/');
+    router.push('/team');
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
