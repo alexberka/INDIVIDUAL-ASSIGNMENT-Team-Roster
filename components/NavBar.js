@@ -4,9 +4,19 @@ import Link from 'next/link';
 import {
   Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
+import { useRouter } from 'next/router';
 import { signOut } from '../utils/auth';
 
 export default function NavBar() {
+  const router = useRouter();
+
+  const search = (e) => {
+    const { value } = e.target;
+    if (e.keyCode === 13 && value !== '') {
+      router.push(`/search/${value}`);
+    }
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
@@ -23,6 +33,13 @@ export default function NavBar() {
             <Link passHref href="/new">
               <Nav.Link>NEW</Nav.Link>
             </Link>
+            <input
+              className="form-control mr-sm-2"
+              id="search"
+              placeholder="Search"
+              aria-label="Search"
+              onKeyUp={search}
+            />
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
         </Navbar.Collapse>
